@@ -50,7 +50,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div className="wrapper">
         <Header />
         <Search getWeather={this.getWeather} />
         <Weather
