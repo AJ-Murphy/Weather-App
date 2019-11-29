@@ -51,7 +51,6 @@ class App extends Component {
   render() {
     return (
       <div className="wrapper">
-        <Header />
         <Search getWeather={this.getWeather} />
         <Weather
           temperature={this.state.temperature}

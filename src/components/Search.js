@@ -1,4 +1,5 @@
 import React from "react";
+import { IoIosSearch } from "react-icons/io";
 
 const Search = props => (
   <form className="search" onSubmit={props.getWeather}>
@@ -17,7 +18,7 @@ const Search = props => (
       placeholder="Country"
     />
     <button className="btn" id="search__btn">
-      Get Weather
+      <IoIosSearch />
     </button>
   </form>
 );
