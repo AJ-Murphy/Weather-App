@@ -17,29 +17,29 @@ import {
 function weatherIcon(icon) {
   switch (icon) {
     case "01d":
-      return <WiDaySunny />;
+      return <WiDaySunny size={200} />;
     case "01n":
-      return <WiNightClear />;
+      return <WiNightClear size={200} />;
     case "02d":
-      return <WiDayCloudy />;
+      return <WiDayCloudy size={200} />;
     case "02n":
-      return <WiNightAltCloudy />;
+      return <WiNightAltCloudy size={200} />;
     case "03d" || "03n":
-      return <WiCloud />;
+      return <WiCloud size={200} />;
     case "04d" || "04n":
-      return <WiCloudy />;
+      return <WiCloudy size={200} />;
     case "09d" || "09n":
-      return <WiRain />;
+      return <WiRain size={200} />;
     case "10d":
-      return <WiDayRain />;
+      return <WiDayRain size={200} />;
     case "10n":
-      return <WiNightRain />;
+      return <WiNightRain size={200} />;
     case "11d" || "11n":
-      return <WiThunderstorm />;
+      return <WiThunderstorm size={200} />;
     case "12d" || "12n":
-      return <WiSnowflakeCold />;
+      return <WiSnowflakeCold size={200} />;
     case "13d" || "13n":
-      return <WiFog />;
+      return <WiFog size={200} />;
     default:
       return null;
   }
