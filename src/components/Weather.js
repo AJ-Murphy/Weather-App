@@ -14,31 +14,63 @@ import {
   WiFog
 } from "react-icons/wi";
 
-function weatherIcon(icon) {
+function UIweather(icon) {
+  const cls = ["day", "night", "clouds", "rain", "thunder", "snow"];
+
   switch (icon) {
     case "01d":
+      document.body.classList.remove(...cls);
+      document.body.classList.add(cls[0]);
       return <WiDaySunny size={200} />;
     case "01n":
+      document.body.classList.remove(...cls);
+      document.body.classList.add(cls[1]);
       return <WiNightClear size={200} />;
     case "02d":
+      document.body.classList.remove(...cls);
+      document.body.classList.add(cls[2]);
       return <WiDayCloudy size={200} />;
     case "02n":
+      document.body.classList.remove(...cls);
+      document.body.classList.add(cls[2]);
       return <WiNightAltCloudy size={200} />;
-    case "03d" || "03n":
+    case "03d":
+    case "03n":
+      document.body.classList.remove(...cls);
+      document.body.classList.add(cls[2]);
       return <WiCloud size={200} />;
-    case "04d" || "04n":
+    case "04d":
+    case "04n":
+      document.body.classList.remove(...cls);
+      document.body.classList.add(cls[2]);
       return <WiCloudy size={200} />;
-    case "09d" || "09n":
+    case "09d":
+    case "09n":
+      document.body.classList.remove(...cls);
+      document.body.classList.add(cls[3]);
       return <WiRain size={200} />;
     case "10d":
+      document.body.classList.remove(...cls);
+      document.body.classList.add(cls[3]);
       return <WiDayRain size={200} />;
     case "10n":
+      document.body.classList.remove(...cls);
+      document.body.classList.add(cls[3]);
       return <WiNightRain size={200} />;
-    case "11d" || "11n":
+    case "11d":
+    case "11n":
+      document.body.classList.remove(...cls);
+      document.body.classList.add(cls[4]);
       return <WiThunderstorm size={200} />;
-    case "12d" || "12n":
+    case "12d":
+    case "12n":
+      document.body.classList.remove(...cls);
+      document.body.classList.add(cls[5]);
       return <WiSnowflakeCold size={200} />;
-    case "13d" || "13n":
+    case "13d":
+    case "13n":
+      document.body.classList.remove(...cls);
+      document.body.classList.add(cls[2]);
       return <WiFog size={200} />;
     default:
       return null;
@@ -67,9 +99,7 @@ const Weather = props => (
         </p>
       </div>
     )}
-    {props.icon && (
-      <div className="weather__icon">{weatherIcon(props.icon)}</div>
-    )}
+    {props.icon && <div className="weather__icon">{UIweather(props.icon)}</div>}
     {props.error && <p>{props.error}</p>}
   </div>
 );
