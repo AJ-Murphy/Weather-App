@@ -18,7 +18,7 @@ const Search = props => (
       placeholder="Country"
     />
     <button className="btn" id="search__btn">
-      <IoIosSearch />
+      <IoIosSearch size={30} className="search__icon" />
     </button>
   </form>
 );

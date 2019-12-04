@@ -15,7 +15,9 @@
   --mainGrey: #ececec;
   --darkGrey: #cfcfcf;
   --mainTransition: all 0.3s linear;
-  --mainSpacing: 2rem;
+
+  --mainSpacing: 3rem;
+
   --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
   --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
 
@@ -48,7 +50,7 @@ body {
   padding: var(--mainSpacing);
   margin: 0 auto;
   font-family: "Nunito Sans", sans-serif;
-  color: var(--offWhite);
+  color: hsl(156, 34%, 19%);
 }
 
 h1,
@@ -67,33 +69,89 @@ h6 {
 
 .wrapper {
   max-width: 800px;
-  height: calc(100vh - 2rem);
+  height: calc(100vh - 3rem);
   margin: 0 auto;
 }
 
 /* Background **/
 .day {
   background-image: var(--day);
+  color: hsl(205, 91%, 92%);
+}
+
+.day .search__input {
+  color: hsl(205, 91%, 92%);
+  border-color: hsl(205, 91%, 92%);
+}
+
+.day .search__icon {
+  color: hsl(205, 91%, 92%);
 }
 
 .night {
   background-image: var(--night);
+  color: hsl(267, 79%, 92%);
+}
+
+.night .search__input {
+  border-color: hsl(267, 79%, 92%);
+  color: hsl(267, 79%, 92%);
+}
+
+.night .search__icon {
+  color: hsl(267, 79%, 92%);
 }
 
 .rain {
   background-image: var(--rain);
+  color: hsl(218, 24%, 35%);
+}
+
+.rain .search__input {
+  border-color: hsl(218, 24%, 35%);
+  color: hsl(218, 24%, 35%);
+}
+.rain .search__icon {
+  color: hsl(218, 24%, 35%);
 }
 
 .clouds {
   background-image: var(--cloud);
+  color: hsl(290, 12%, 48%);
+}
+
+.clouds .search__input {
+  border-color: hsl(290, 12%, 48%);
+  color: hsl(290, 12%, 48%);
+}
+.clouds .search__icon {
+  color: hsl(290, 12%, 48%);
 }
 
 .thunder {
   background-image: var(--thunder);
+  color: hsl(177, 29%, 84%);
+}
+
+.thunder .search__input {
+  border-color: hls(177, 29%, 84%);
+  color: hsl(177, 29%, 84%);
+}
+.thunder .search__icon {
+  color: hsl(177, 29%, 84%);
 }
 
 .snow {
   background-image: var(--snow);
+  color: hsl(214, 26%, 55%);
+}
+
+.snow .search__input {
+  border-color: hsl(214, 26%, 55%);
+  color: hsl(214, 26%, 55%);
+}
+.snow .search__icon {
+  color: hsl(214, 26%, 55%);
 }
 
 /** Search */
@@ -108,11 +166,15 @@ h6 {
   padding: 0.5em;
   margin: 0.2em;
   min-width: 70px;
+  color: hsl(156, 34%, 19%);
+  font-size: 0.8rem;
   border: 0;
+  border-bottom: solid 2px hsl(156, 34%, 19%);
+  background-color: transparent;
 }
 
 #search__city {
-  flex-grow: 6;
+  flex-grow: 5;
 }
 
 #search__country {
@@ -120,11 +182,14 @@ h6 {
 }
 
 #search__btn {
-  background-color: var(--primaryColor);
+  background-color: transparent;
   flex-grow: 1;
   height: 30px;
-  padding: 0.5em;
   margin: 0.2em;
+}
+
+.search__icon {
+  color: hsl(156, 34%, 19%);
 }
 
 /** Weather */
@@ -136,7 +201,7 @@ h6 {
   flex-direction: column;
   /* justify-content: top; */
   align-items: center;
-  padding: var(--mainSpacing) 0 var(--mainSpacing);
+  padding: 3rem 0 3rem;
 }
 
 .weather__loc,
@@ -147,6 +212,7 @@ h6 {
 }
 
 .weather__temp {
-  font-size: 4em;
-  padding: var(--mainSpacing) 0 var(--mainSpacing);
+  font-size: 3.5rem;
+  font-weight: 900;
+  padding: 2rem 0 1rem;
 }
